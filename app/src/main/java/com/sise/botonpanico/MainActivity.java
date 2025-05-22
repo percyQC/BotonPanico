@@ -1,7 +1,11 @@
 package com.sise.botonpanico;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +13,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.sise.botonpanico.activities.InicioActivity;
+import com.sise.botonpanico.activities.PerfilCiudadanoActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private final String TAG = MainActivity.class.getSimpleName();
+
+    //private Button btnPerfilCiudadano;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +33,21 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //btnPerfilCiudadano = findViewById(R.id.activitymain_btn_saludar);
+        //btnPerfilCiudadano.setOnClickListener(view -> {
+        //   Toast.makeText(this,"Abriendo perfil Ciudadno", Toast.LENGTH_SHORT).show();
+        //});
+    }
+
+    public void onClickPerfilCiudadano(View view){
+        //Toast.makeText(this,"Abriendo perfil Ciudadno", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, PerfilCiudadanoActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickInicio(View view){
+        Intent intent = new Intent(this, InicioActivity.class);
+        startActivity(intent);
     }
 
     @Override
