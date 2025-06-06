@@ -11,8 +11,6 @@
         android:id="@+id/activity_btn_sos"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginStart="@dimen/margin_grande"
-        android:layout_marginEnd="@dimen/margin_grande"
         android:layout_marginTop="@dimen/margin_grande"
         android:text="@string/activity_btn_sos"
         android:textSize="@dimen/texto_supertitulo"
@@ -32,23 +30,25 @@
         android:layout_marginTop="@dimen/margin_grande"
         android:text="@string/activity_btn_aux1"
         android:textSize="@dimen/texto_titulo"
+        app:backgroundTint="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/activity_btn_aux2"
         app:layout_constraintTop_toBottomOf="@+id/activity_btn_sos"
+        android:background="@drawable/btn_secundario_sos"
         />
 
     <Button
         android:id="@+id/activity_btn_aux2"
         android:layout_width="0dp"
         android:layout_height="120dp"
-        android:layout_marginStart="@dimen/margin_pequeno"
-        android:layout_marginEnd="@dimen/margin_grande"
         android:layout_marginTop="@dimen/margin_grande"
         android:text="@string/activity_btn_aux2"
         android:textSize="@dimen/texto_titulo"
+        app:backgroundTint="@null"
         app:layout_constraintStart_toEndOf="@+id/activity_btn_aux1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_btn_sos"
+        android:background="@drawable/btn_secundario_sos"
         />
 
     <Button

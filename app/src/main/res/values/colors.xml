@@ -6,4 +6,7 @@
 
     <color name="red_background1">#f77c7c</color>
     <color name="red_background2">#bd4646</color>
+
+    <color name="yellow_variation_1">#f5ba56</color>
+    <color name="yellow_variation_2">#ed9e18</color>
 </resources>
