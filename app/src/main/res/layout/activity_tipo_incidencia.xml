@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.TipoIncidenciaActivity">
+
+    <ProgressBar
+        android:id="@+id/activityotroincidente_pb_loading"
+        android:layout_marginTop="@dimen/margin_enorme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tipo_incidencia_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="@dimen/texto_supertitulo"
+        android:text="@string/otro_incidente_titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/activityotroincidente_ly_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/altura_grande"
+        android:layout_marginStart="@dimen/margin_grande"
+        android:layout_marginEnd="@dimen/margin_grande"
+        android:layout_marginTop="@dimen/margin_grande"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipo_incidencia_titulo">
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/tipo_incidencia_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="@dimen/margin_grande"
+        android:background="@color/black"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityotroincidente_ly_linear" />
+
+    <Spinner
+        android:id="@+id/tipo_incidencia_spinner"
+        style="@style/Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipo_incidencia_divider" />
+
+    <EditText
+        android:id="@+id/tipo_incidencia_descripcion"
+        android:layout_width="340dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/otro_incidente_descripcion"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipo_incidencia_spinner" />
+
+    <Button
+        android:id="@+id/tipo_incidencia_enviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/btn_principal_sos"
+        app:backgroundTint="@null"
+        android:text="@string/otro_incidente_guardar"
+        android:onClick="onClickEnviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipo_incidencia_descripcion" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

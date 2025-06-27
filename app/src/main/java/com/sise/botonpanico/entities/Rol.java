@@ -2,18 +2,18 @@ package com.sise.botonpanico.entities;
 
 import java.util.Date;
 
-public class EstadoIncidencia {
-    private Integer idEstadoIncidencia;
+public class Rol {
+    private Integer idRol;
     private String descripcion;
     private String estadoAuditoria;
     private Date fechaCreacionAuditoria;
 
-    public Integer getIdEstadoIncidencia() {
-        return idEstadoIncidencia;
+    public Integer getIdRol() {
+        return idRol;
     }
 
-    public void setIdEstadoIncidencia(Integer idEstadoIncidencia) {
-        this.idEstadoIncidencia = idEstadoIncidencia;
+    public void setIdRol(Integer idRol) {
+        this.idRol = idRol;
     }
 
     public String getDescripcion() {
@@ -38,9 +38,5 @@ public class EstadoIncidencia {
 
     public void setFechaCreacionAuditoria(Date fechaCreacionAuditoria) {
         this.fechaCreacionAuditoria = fechaCreacionAuditoria;
-    }
-
-    public static EstadoIncidencia builder() {
-        return new EstadoIncidencia();
     }
 }

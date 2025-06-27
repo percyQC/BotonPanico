@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BotonPanico</string>
 
-    <string name="activityperfilciudadano_tv_titulo">Completa tu Perfil</string>
+    <string name="activityperfilciudadano_tv_titulo">Ingresa tus datos</string>
     <string name="activityperfilciudadano_et_numerodocumento_hint">Número de documento</string>
     <string name="activityperfilciudadano_et_apellidopaterno_hint">Apellido paterno</string>
     <string name="activityperfilciudadano_et_apellidomaterno_hint">Apellido materno</string>
@@ -15,4 +15,20 @@
     <string name="activity_btn_aux1">Incendio</string>
     <string name="activity_btn_aux2">Asistencia</string>
     <string name="activity_btn_otro">Otra incidencia</string>
+
+    <string name="otro_incidente_guardar">Enviar</string>
+    <string name="otro_incidente_descripcion">Ingrese una descripcion</string>
+    <string name="otro_incidente_titulo">Otros Incidentes</string>
+    <string name="otro_incidente_btnincendio">Incendio</string>
+    <string name="otro_incidente_btnfuga">Fuga de Gas</string>
+    <string name="otro_incidente_btnelectrico">Problemas electricos</string>
+    <string name="otro_incidente_btncaida">Fractura</string>
+
+    <string name="actmain_btn_inicio">Iniciar Sesión</string>
+    <string name="actmain_et_username_hint">Nombre de Usuario</string>
+    <string name="actmain_et_password_hint">Contraseña</string>
+    <string name="actmain_txt_registrar"><u>Registrarse</u></string>
+    <string name="actmain_sw_modologin">Ingresar como personal interno</string>
+
+
 </resources>

@@ -1,5 +1,7 @@
 package com.sise.botonpanico.shared;
 
+import android.os.StrictMode;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
@@ -9,19 +11,27 @@ import java.util.Map;
 
 public class HttpUtil {
 
-    public static String GET(String baseUrl,String path, Map<String,String> query){
-        try{
-            URL url = new URL(baseUrl+"/"+path);
+    private HttpUtil() {
+    }
+
+    public static String GET(String baseUrl, String path) {
+        try {
+            System.out.println("GET ==> "+baseUrl+path);
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            URL url = new URL(baseUrl+path);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
             con.setRequestMethod("GET");
-            con.setRequestProperty("Content-type","application/json");
-            con.setDoOutput(true);
+            con.setConnectTimeout(5000);
+            con.setReadTimeout(5000);
+            con.setRequestProperty("Content-Type","application/json");
+            con.setDoOutput(false);
 
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;
             StringBuilder response = new StringBuilder();
-            while ((inputLine = in.readLine()) != null){
+            while ((inputLine = in.readLine()) != null) {
                 response.append(inputLine);
             }
             in.close();
@@ -36,12 +46,16 @@ public class HttpUtil {
 
     public static String POST(String baseUrl, String path, String body) {
         try {
-            URL url = new URL(baseUrl+"/"+path);
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            URL url = new URL(baseUrl+path);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type","application/json");
             con.setDoOutput(true);
+            con.setConnectTimeout(5000);
+            con.setReadTimeout(5000);
 
             try (DataOutputStream out = new DataOutputStream(con.getOutputStream())) {
                 out.writeBytes(body);

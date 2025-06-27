@@ -1,16 +1,16 @@
 package com.sise.botonpanico.shared;
 
 public class BaseResponse<T> {
-    private Boolean success;
+    private boolean success;
     private String message;
     private Integer status;
     private T data;
 
-    public Boolean getSuccess() {
+    public boolean isSuccess() {
         return success;
     }
 
-    public void setSuccess(Boolean success) {
+    public void setSuccess(boolean success) {
         this.success = success;
     }
 

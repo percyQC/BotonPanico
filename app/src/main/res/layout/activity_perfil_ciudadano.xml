@@ -149,6 +149,7 @@
         android:layout_marginStart="@dimen/margin_grande"
         android:layout_marginEnd="@dimen/margin_grande"
         android:text="@string/activityperfilciudadano_btn_guardar_text"
+        android:onClick="onClickRegistrarse"
         style="@style/EditText"
         app:layout_constraintTop_toBottomOf="@+id/activityperfilciudadano_et_direccion"
         app:layout_constraintStart_toStartOf="parent"

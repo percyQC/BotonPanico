@@ -9,4 +9,15 @@
 
     <color name="yellow_variation_1">#f5ba56</color>
     <color name="yellow_variation_2">#ed9e18</color>
+
+    <color name="red_light">#FFCDD2</color>
+    <color name="red_dark">#B71C1C</color>
+
+    <color name="blue_light">#BBDEFB</color>
+    <color name="blue_dark">#0D47A1</color>
+
+    <color name="orange_light">#FFE0B2</color>
+    <color name="orange_dark">#E65100</color>
+
+
 </resources>

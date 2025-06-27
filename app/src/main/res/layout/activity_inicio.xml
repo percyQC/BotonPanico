@@ -11,15 +11,15 @@
         android:id="@+id/activity_btn_sos"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="@dimen/margin_grande"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/btn_principal_sos"
         android:text="@string/activity_btn_sos"
         android:textSize="@dimen/texto_supertitulo"
+        android:onClick="onclickSOSPrincipal"
         app:backgroundTint="@null"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/btn_principal_sos"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/activity_btn_aux1"
@@ -42,14 +42,13 @@
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginTop="@dimen/margin_grande"
+        android:background="@drawable/btn_secundario_sos"
         android:text="@string/activity_btn_aux2"
         android:textSize="@dimen/texto_titulo"
         app:backgroundTint="@null"
-        app:layout_constraintStart_toEndOf="@+id/activity_btn_aux1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activity_btn_sos"
-        android:background="@drawable/btn_secundario_sos"
-        />
+        app:layout_constraintStart_toEndOf="@+id/activity_btn_aux1"
+        app:layout_constraintTop_toBottomOf="@+id/activity_btn_sos" />
 
     <Button
         android:id="@+id/activity_btn_otro"
@@ -58,6 +57,7 @@
         android:layout_marginStart="@dimen/margin_grande"
         android:layout_marginEnd="@dimen/margin_grande"
         android:layout_marginBottom="@dimen/margin_grande"
+        android:onClick="onClickOtraIncidencia"
         android:text="@string/activity_btn_otro"
         android:textSize="@dimen/texto_normal"
         app:layout_constraintBottom_toBottomOf="parent"
